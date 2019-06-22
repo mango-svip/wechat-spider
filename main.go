@@ -2,6 +2,7 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
+    "github.com/mango-svip/wechat-spider/file"
 )
 
 
@@ -15,6 +16,8 @@ func main()  {
            "message":"pong",
        })
     })
+
+    r.POST("/upload", file.UploadImage)
 
     r.Run()
 }
